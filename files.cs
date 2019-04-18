@@ -24,7 +24,6 @@ namespace checklist {
         public void delete_list(string name){
             string dir = Directory.GetCurrentDirectory();
             if(File.Exists(dir + "\\" + $"{name}.db")){
-                loop:
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"Type 'yes' if you are sure you want to delete the list: '{name}'");
                 Console.WriteLine("Type 'no' if you arent sure. \n");
@@ -44,8 +43,8 @@ namespace checklist {
                         Console.ResetColor();
                         break;
                     default:
-                        Console.WriteLine("Please type 'yes' or 'no' in lower case");
-                        goto loop;
+                        Console.WriteLine("Unknown input.");
+                        break;
                 }
             }
             else {

@@ -68,6 +68,9 @@ namespace checklist {
                     case "quit":
                         Environment.Exit(0);
                         break;
+                    default:
+                    Console.WriteLine("Unknown input, please try again..");
+                    break;
                 }
             }
         }
